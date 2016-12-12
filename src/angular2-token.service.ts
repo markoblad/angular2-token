@@ -173,7 +173,7 @@ export class Angular2TokenService implements CanActivate {
     signInOAuth(oAuthType: string) {
 
         let oAuthPath: string = this._getOAuthPath(oAuthType);
-        let callbackUrl: string = `${this._options.oAuthCallbackHost || window.location.origin}/${this._options.oAuthCallbackPath}`;
+        let callbackUrl: string = `${window.location.origin}/${this._options.oAuthCallbackPath}`;
         let oAuthWindowType: string = this._options.oAuthWindowType;
         let authUrl: string = this._buildOAuthUrl(oAuthPath, callbackUrl, oAuthWindowType);
 
